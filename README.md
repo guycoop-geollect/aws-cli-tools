@@ -1,10 +1,16 @@
 # Auth AWS and assume roles
 
-you will need a `secrets_.py` file containing your mfa device serial from AWS i.e.:
+## Setup
+- create a `secrets_.py` file containing your mfa device serial from AWS i.e.:
 ```
 MFA_DEVICE_SERIAL = "arn:aws:iam::123456789012:mfa/YourName"
 ```
 
-run `main` to reauth and optionally assume a role.
+- modify the paths in the `config.py` file.
+- your main user profile should be created in `~/.aws/credentials` and should be named `auth`.
 
-alternatively it is possible to run `auth_only` or `assume_role_only` separately.
+## Usage
+run `main` to authenticate and optionally assume a role. (just follow the instructions)
+
+---
+alternatively it is possible to run `auth_only.py` or `assume_role_only.py` separately.
